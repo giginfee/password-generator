@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" media="screen">
+    <script type="text/javascript" src="script.js" defer=""></script>
+</head>
+<body>
+<div>
+    <form>
+        <div>Password length:
+        <span id="len">5</span></div>
+        <label>
+            <input value=5 name="len_input" id="len_input" type="range" step=1 min=5 max=20 list="values">
+            <datalist id="values">
+                <option value="0" label="5"></option>
+                <option value="25" label="10"></option>
+                <option value="50" label="15"></option>
+                <option value="75" label="20"></option>
+            </datalist>
+        </label>
+        <input type="button" id="generate_button" value="Generate">
+    </form>
+    <div>Result:
+    <span id="result"></span></div>
+</div>
+
+</body>
+</html>
