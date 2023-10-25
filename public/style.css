@@ -93,6 +93,11 @@ datalist {
     cursor: pointer;
 }
 
+#generate_button:active {
+
+    background-color: #4c4ba9;
+}
+
 
 
 option {
@@ -187,4 +192,53 @@ input[type=range]:focus::-ms-fill-lower {
 }
 input[type=range]:focus::-ms-fill-upper {
     background: #FFFFFF;
+}
+.snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 220px; /* Set a default minimum width */
+//margin-right: 30px; /* Divide value of min-width by 2 */
+    background-color: #777777; /* Black background color */
+    color: #ffffff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 30px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    /*z-index: 1; /* Add a z-index if needed */
+    /* left: 50%; /*!* Center the snackbar *!*/
+    right: 1%; /*!* Center the snackbar *!*/
+    top: 30px; /* 30px from the bottom */
+    /*display: flex;*/
+    /*justify-content: center;*/
+
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+.show {
+    opacity: 50%;
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 0.75s;
+    animation: fadein 0.5s, fadeout 0.5s 0.75s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 50%;}
+}
+
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 50%;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 50%;}
+    to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 30px; opacity: 50%;}
+    to {top: 0; opacity: 0;}
 }
